@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HealthyMe</string>
+    <string name="reminder_title">Reminder Title</string>
+    <string name="reminder_interval">Interval (hours)</string>
+    <string name="reminder_activate">Activate</string>
+    <string name="every_hours">Every %1$dh</string>
+    <string name="interval_unit">hour interval</string>
+    <string name="every_n_unit">Every %1$dh</string>
+    <string name="every_n_unit_single">Every %1$d unit</string>
+
+
+</resources>

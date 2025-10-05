@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#1F2937</color>
+    <color name="gray">#6B7280</color>
+
+    <!-- Primary / Accent (Blue theme) -->
+    <color name="blue_primary">#2196F3</color>   <!-- Main blue -->
+    <color name="blue_light">#BBDEFB</color>     <!-- Light background -->
+    <color name="blue_dark">#1565C0</color>
+    <color name="blue_extra_light">#E3F2FD</color>
+    <!-- Dark blue (pressed state) -->
+
+    <!-- Extra UI helpers -->
+    <color name="background_light">#F9FAFB</color>
+    <color name="border_color">#E5E7EB</color>
+
+    <color name="text_primary">#222222</color>
+    <color name="text_secondary">#555555</color>
+    <color name="text_hint">#999999</color>
+    <color name="nav_background">#FFFFFF</color>
+
+</resources>

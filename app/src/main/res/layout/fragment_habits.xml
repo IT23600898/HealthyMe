@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:paddingTop="?attr/actionBarSize"
+    android:padding="18dp"
+    android:background="@android:color/white">
+
+    <!-- Progress Card -->
+    <!-- Progress Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/progressCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="10dp"
+        app:cardUseCompatPadding="true"
+        app:strokeColor="@color/blue_light"
+        app:strokeWidth="1dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="@drawable/bg_card_gradient">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvProgressTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Today's progress"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.02"
+                android:fontFamily="@font/poppins_medium" />
+
+            <!-- Circle Progress -->
+            <com.github.lzyzsd.circleprogress.DonutProgress
+                android:id="@+id/progressDonut"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:donut_finished_color="@color/blue_primary"
+                app:donut_unfinished_color="@color/blue_light"
+                app:donut_max="100"
+                app:donut_progress="0"
+                app:donut_text_color="@color/black"
+                app:donut_text_size="22sp"
+                app:donut_background_color="@android:color/transparent"
+                app:donut_circle_starting_degree="270" />
+
+            <!-- Motivation Text (instead of clipped inner text) -->
+            <TextView
+                android:id="@+id/tvMotivation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Keep it up!"
+                android:textColor="@color/blue_primary"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHabits"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/progressCard"
+        app:layout_constraintBottom_toTopOf="@id/btnAddHabit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Add Habit Button -->
+    <Button
+        android:id="@+id/btnAddHabit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text=" Add Habit"
+        android:textSize="18sp"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        android:padding="18dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
