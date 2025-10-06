@@ -53,7 +53,7 @@ class ReminderWorker(appContext: Context, workerParams: WorkerParameters) :
             .setContentText(message)
             .setSmallIcon(R.drawable.ic_launcher_foreground)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
-            .setSound(soundUri) // 👈 default notification sound
+            .setSound(soundUri)
             .setAutoCancel(true)
             .setVibrate(longArrayOf(0, 250, 200, 250))
 

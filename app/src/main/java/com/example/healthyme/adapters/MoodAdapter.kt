@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.healthyme.R
@@ -26,7 +25,8 @@ class MoodAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoodViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_mood, parent, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_mood, parent, false)
         return MoodViewHolder(view)
     }
 
@@ -37,10 +37,9 @@ class MoodAdapter(
         holder.noteText.text = mood.note
         holder.dateText.text = mood.date
 
-        holder.editButton.setOnClickListener { onEdit(position) }
-        holder.deleteButton.setOnClickListener { onDelete(position) }
+        holder.editButton.setOnClickListener { onEdit(holder.adapterPosition) }
+        holder.deleteButton.setOnClickListener { onDelete(holder.adapterPosition) }
     }
 
     override fun getItemCount(): Int = moods.size
 }
-
